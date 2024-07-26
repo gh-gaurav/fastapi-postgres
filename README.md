@@ -9,32 +9,30 @@ This is a simple quiz application built with FastAPI, SQLAlchemy, and PostgreSQL
 - pip (Python package installer)
 
 ## Installation
+1.**Clone the repository
 
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repo-url>
-   cd fastapi-postgres
+         git clone <your-repo-url>
+         cd fastapi-postgres
 
 2.**Create a virtual environment:**
   
-    bash
+    
     python -m venv .env
 
 3.**Activate the virtual environment:**
 
 Windows:
 
-    bash
+    
     env\Scripts\activate
 
 Linux/MacOS:
 
-    bash
+    
     source .env/bin/activate
 
 4.**Install the dependencies:**
 
-    bash
     pip install -r requirements.txt
 
 5.**Set up the PostgreSQL database:**
@@ -42,19 +40,19 @@ Linux/MacOS:
   Make sure PostgreSQL is installed and running.
   Create a new database:
 
-    sql
+    
     CREATE DATABASE quizapplication;
 
 6.**Update the database URL in database.py:**
 
-    python
+    
     URL_DATABASE  = 'postgresql://postgres:<your-password>@localhost:5432/quizapplication'
 
 7.**Running the Application**
 
   7.1**Start the FastAPI application using Uvicorn:**
 
-    bash
+    
     uvicorn main:app --reload
 
   7.2**Open your browser and navigate to the following URLs:**
@@ -70,7 +68,7 @@ Create a Question
   
   Request Body:
 
-    json
+    
     {
       "question_text": "What is the capital of France?",
       "choices": [
@@ -82,7 +80,7 @@ Create a Question
 
 Response:
 
-    json
+    
 
     {
       "message": "Question created successfully"
