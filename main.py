@@ -10,6 +10,7 @@ app = FastAPI()
 # Creating tables
 models.Base.metadata.create_all(bind=engine)
 
+#ihhii
 class ChoiceBase(BaseModel):
     choice_text: str
     is_correct: bool
